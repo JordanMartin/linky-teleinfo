@@ -1,0 +1,13 @@
+[Unit]
+Description=Téléinfo Linky
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/home-automation/linky-teleinfo/teleinfo.py
+Restart=on-failure
+TimeoutStopSec=1
+User=pi
+
+[Install]
+WantedBy=multi-user.target
